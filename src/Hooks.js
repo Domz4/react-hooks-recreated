@@ -1,3 +1,4 @@
+
 function useState(initValue) {
     let val = initValue;
     const state = () => val;
@@ -7,3 +8,11 @@ function useState(initValue) {
     return [state, setState];
 }
 const [count, setCount] = useState(1);
+
+function useEffect(callback, dependencyArr) {
+    // old dependency 
+    let isChanged = true; 
+    // compare dependency 
+    if (isChanged) callback();
+    // new dependency 
+} 
